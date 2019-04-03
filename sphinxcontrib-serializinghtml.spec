@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-serializinghtml
 Version  : 1.1.1
-Release  : 1
+Release  : 2
 URL      : https://files.pythonhosted.org/packages/94/c5/ddb8d1d64e03441789078737eea1340667fd82029335d9e7f0805113dd9e/sphinxcontrib-serializinghtml-1.1.1.tar.gz
 Source0  : https://files.pythonhosted.org/packages/94/c5/ddb8d1d64e03441789078737eea1340667fd82029335d9e7f0805113dd9e/sphinxcontrib-serializinghtml-1.1.1.tar.gz
 Source99 : https://files.pythonhosted.org/packages/94/c5/ddb8d1d64e03441789078737eea1340667fd82029335d9e7f0805113dd9e/sphinxcontrib-serializinghtml-1.1.1.tar.gz.asc
@@ -62,7 +62,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554253879
+export SOURCE_DATE_EPOCH=1554254605
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
