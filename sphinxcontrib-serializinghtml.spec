@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : sphinxcontrib-serializinghtml
-Version  : 1.1.1
-Release  : 2
-URL      : https://files.pythonhosted.org/packages/94/c5/ddb8d1d64e03441789078737eea1340667fd82029335d9e7f0805113dd9e/sphinxcontrib-serializinghtml-1.1.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/94/c5/ddb8d1d64e03441789078737eea1340667fd82029335d9e7f0805113dd9e/sphinxcontrib-serializinghtml-1.1.1.tar.gz
-Source99 : https://files.pythonhosted.org/packages/94/c5/ddb8d1d64e03441789078737eea1340667fd82029335d9e7f0805113dd9e/sphinxcontrib-serializinghtml-1.1.1.tar.gz.asc
+Version  : 1.1.3
+Release  : 3
+URL      : https://files.pythonhosted.org/packages/cd/cc/fd7d17cfae18e5a92564bb899bc05e13260d7a633f3cffdaad4e5f3ce46a/sphinxcontrib-serializinghtml-1.1.3.tar.gz
+Source0  : https://files.pythonhosted.org/packages/cd/cc/fd7d17cfae18e5a92564bb899bc05e13260d7a633f3cffdaad4e5f3ce46a/sphinxcontrib-serializinghtml-1.1.3.tar.gz
+Source99 : https://files.pythonhosted.org/packages/cd/cc/fd7d17cfae18e5a92564bb899bc05e13260d7a633f3cffdaad4e5f3ce46a/sphinxcontrib-serializinghtml-1.1.3.tar.gz.asc
 Summary  : No summary provided
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -55,14 +55,14 @@ python3 components for the sphinxcontrib-serializinghtml package.
 
 
 %prep
-%setup -q -n sphinxcontrib-serializinghtml-1.1.1
+%setup -q -n sphinxcontrib-serializinghtml-1.1.3
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C
-export SOURCE_DATE_EPOCH=1554254605
+export SOURCE_DATE_EPOCH=1554402800
 export MAKEFLAGS=%{?_smp_mflags}
 python3 setup.py build
 
