@@ -5,18 +5,22 @@
 # Source0 file verified with key 0x102C2C17498D6B9E (i.tkomiya@gmail.com)
 #
 Name     : sphinxcontrib-serializinghtml
-Version  : 1.1.3
-Release  : 10
-URL      : https://files.pythonhosted.org/packages/cd/cc/fd7d17cfae18e5a92564bb899bc05e13260d7a633f3cffdaad4e5f3ce46a/sphinxcontrib-serializinghtml-1.1.3.tar.gz
-Source0  : https://files.pythonhosted.org/packages/cd/cc/fd7d17cfae18e5a92564bb899bc05e13260d7a633f3cffdaad4e5f3ce46a/sphinxcontrib-serializinghtml-1.1.3.tar.gz
-Source1  : https://files.pythonhosted.org/packages/cd/cc/fd7d17cfae18e5a92564bb899bc05e13260d7a633f3cffdaad4e5f3ce46a/sphinxcontrib-serializinghtml-1.1.3.tar.gz.asc
-Summary  : No summary provided
+Version  : 1.1.4
+Release  : 11
+URL      : https://files.pythonhosted.org/packages/ac/86/021876a9dd4eac9dae0b1d454d848acbd56d5574d350d0f835043b5ac2cd/sphinxcontrib-serializinghtml-1.1.4.tar.gz
+Source0  : https://files.pythonhosted.org/packages/ac/86/021876a9dd4eac9dae0b1d454d848acbd56d5574d350d0f835043b5ac2cd/sphinxcontrib-serializinghtml-1.1.4.tar.gz
+Source1  : https://files.pythonhosted.org/packages/ac/86/021876a9dd4eac9dae0b1d454d848acbd56d5574d350d0f835043b5ac2cd/sphinxcontrib-serializinghtml-1.1.4.tar.gz.asc
+Summary  : sphinxcontrib-serializinghtml is a sphinx extension which outputs "serialized" HTML files (json and pickle).
 Group    : Development/Tools
 License  : BSD-2-Clause
 Requires: sphinxcontrib-serializinghtml-license = %{version}-%{release}
 Requires: sphinxcontrib-serializinghtml-python = %{version}-%{release}
 Requires: sphinxcontrib-serializinghtml-python3 = %{version}-%{release}
+Requires: flake8
+Requires: mypy
 BuildRequires : buildreq-distutils3
+BuildRequires : flake8
+BuildRequires : mypy
 BuildRequires : pluggy
 BuildRequires : py-python
 BuildRequires : pytest
@@ -26,37 +30,6 @@ BuildRequires : virtualenv
 %description
 sphinxcontrib-serializinghtml is a sphinx extension which outputs
 "serialized" HTML files (json and pickle).
-
-Home-page: http://sphinx-doc.org/
-Author: Georg Brandl
-Author-email: georg@python.org
-License: BSD
-Download-URL: https://pypi.org/project/sphinxcontrib-serializinghtml/
-Description: 
-        sphinxcontrib-serializinghtml is a sphinx extension which outputs
-        "serialized" HTML files (json and pickle).
-        
-Platform: any
-Classifier: Development Status :: 5 - Production/Stable
-Classifier: Environment :: Console
-Classifier: Environment :: Web Environment
-Classifier: Intended Audience :: Developers
-Classifier: Intended Audience :: Education
-Classifier: License :: OSI Approved :: BSD License
-Classifier: Operating System :: OS Independent
-Classifier: Programming Language :: Python
-Classifier: Programming Language :: Python :: 3
-Classifier: Programming Language :: Python :: 3.5
-Classifier: Programming Language :: Python :: 3.6
-Classifier: Programming Language :: Python :: 3.7
-Classifier: Framework :: Sphinx
-Classifier: Framework :: Sphinx :: Extension
-Classifier: Topic :: Documentation
-Classifier: Topic :: Documentation :: Sphinx
-Classifier: Topic :: Text Processing
-Classifier: Topic :: Utilities
-Requires-Python: >=3.5
-Provides-Extra: test
 
 %package license
 Summary: license components for the sphinxcontrib-serializinghtml package.
@@ -86,15 +59,15 @@ python3 components for the sphinxcontrib-serializinghtml package.
 
 
 %prep
-%setup -q -n sphinxcontrib-serializinghtml-1.1.3
-cd %{_builddir}/sphinxcontrib-serializinghtml-1.1.3
+%setup -q -n sphinxcontrib-serializinghtml-1.1.4
+cd %{_builddir}/sphinxcontrib-serializinghtml-1.1.4
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1582918891
+export SOURCE_DATE_EPOCH=1583170724
 # -Werror is for werrorists
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
@@ -108,7 +81,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/sphinxcontrib-serializinghtml
-cp %{_builddir}/sphinxcontrib-serializinghtml-1.1.3/LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-serializinghtml/5846f689e338684fe93c22b0c477944d5a0803f9
+cp %{_builddir}/sphinxcontrib-serializinghtml-1.1.4/LICENSE %{buildroot}/usr/share/package-licenses/sphinxcontrib-serializinghtml/5846f689e338684fe93c22b0c477944d5a0803f9
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
