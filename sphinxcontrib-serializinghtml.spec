@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-serializinghtml
 Version  : 1.1.4
-Release  : 11
+Release  : 12
 URL      : https://files.pythonhosted.org/packages/ac/86/021876a9dd4eac9dae0b1d454d848acbd56d5574d350d0f835043b5ac2cd/sphinxcontrib-serializinghtml-1.1.4.tar.gz
 Source0  : https://files.pythonhosted.org/packages/ac/86/021876a9dd4eac9dae0b1d454d848acbd56d5574d350d0f835043b5ac2cd/sphinxcontrib-serializinghtml-1.1.4.tar.gz
 Source1  : https://files.pythonhosted.org/packages/ac/86/021876a9dd4eac9dae0b1d454d848acbd56d5574d350d0f835043b5ac2cd/sphinxcontrib-serializinghtml-1.1.4.tar.gz.asc
@@ -29,7 +29,7 @@ BuildRequires : virtualenv
 
 %description
 sphinxcontrib-serializinghtml is a sphinx extension which outputs
-"serialized" HTML files (json and pickle).
+        "serialized" HTML files (json and pickle).
 
 %package license
 Summary: license components for the sphinxcontrib-serializinghtml package.
@@ -52,7 +52,7 @@ python components for the sphinxcontrib-serializinghtml package.
 Summary: python3 components for the sphinxcontrib-serializinghtml package.
 Group: Default
 Requires: python3-core
-Provides: pypi(sphinxcontrib-serializinghtml)
+Provides: pypi(sphinxcontrib_serializinghtml)
 
 %description python3
 python3 components for the sphinxcontrib-serializinghtml package.
@@ -67,8 +67,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1583170724
-# -Werror is for werrorists
+export SOURCE_DATE_EPOCH=1583453169
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$CFLAGS -fno-lto "
