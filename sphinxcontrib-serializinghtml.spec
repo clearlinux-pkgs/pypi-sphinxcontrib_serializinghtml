@@ -6,7 +6,7 @@
 #
 Name     : sphinxcontrib-serializinghtml
 Version  : 1.1.5
-Release  : 28
+Release  : 29
 URL      : https://files.pythonhosted.org/packages/b5/72/835d6fadb9e5d02304cf39b18f93d227cd93abd3c41ebf58e6853eeb1455/sphinxcontrib-serializinghtml-1.1.5.tar.gz
 Source0  : https://files.pythonhosted.org/packages/b5/72/835d6fadb9e5d02304cf39b18f93d227cd93abd3c41ebf58e6853eeb1455/sphinxcontrib-serializinghtml-1.1.5.tar.gz
 Source1  : https://files.pythonhosted.org/packages/b5/72/835d6fadb9e5d02304cf39b18f93d227cd93abd3c41ebf58e6853eeb1455/sphinxcontrib-serializinghtml-1.1.5.tar.gz.asc
@@ -16,16 +16,12 @@ License  : BSD-2-Clause
 Requires: sphinxcontrib-serializinghtml-license = %{version}-%{release}
 Requires: sphinxcontrib-serializinghtml-python = %{version}-%{release}
 Requires: sphinxcontrib-serializinghtml-python3 = %{version}-%{release}
-Requires: flake8
-Requires: mypy
 BuildRequires : buildreq-distutils3
-BuildRequires : flake8
-BuildRequires : mypy
-BuildRequires : pluggy
-BuildRequires : py-python
-BuildRequires : pytest
-BuildRequires : tox
-BuildRequires : virtualenv
+BuildRequires : pypi(pluggy)
+BuildRequires : pypi(py)
+BuildRequires : pypi(pytest)
+BuildRequires : pypi(tox)
+BuildRequires : pypi(virtualenv)
 
 %description
 sphinxcontrib-serializinghtml is a sphinx extension which outputs
@@ -67,7 +63,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1621871139
+export SOURCE_DATE_EPOCH=1641428115
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fno-lto "
 export FCFLAGS="$FFLAGS -fno-lto "
