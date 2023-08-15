@@ -4,10 +4,10 @@
 # Using build pattern: pyproject
 #
 Name     : pypi-sphinxcontrib_serializinghtml
-Version  : 1.1.7
-Release  : 40
-URL      : https://files.pythonhosted.org/packages/0d/1b/96acc54abc747faa2c9a64b05f12e043eee30de7933181a752cb458d1134/sphinxcontrib_serializinghtml-1.1.7.tar.gz
-Source0  : https://files.pythonhosted.org/packages/0d/1b/96acc54abc747faa2c9a64b05f12e043eee30de7933181a752cb458d1134/sphinxcontrib_serializinghtml-1.1.7.tar.gz
+Version  : 1.1.8
+Release  : 41
+URL      : https://files.pythonhosted.org/packages/a0/a3/4bd9d8c5c97312bf46b059bcf76eab42ce6ffb12560b7ce9a247e2e524a3/sphinxcontrib_serializinghtml-1.1.8.tar.gz
+Source0  : https://files.pythonhosted.org/packages/a0/a3/4bd9d8c5c97312bf46b059bcf76eab42ce6ffb12560b7ce9a247e2e524a3/sphinxcontrib_serializinghtml-1.1.8.tar.gz
 Summary  : sphinxcontrib-serializinghtml is a sphinx extension which outputs "serialized" HTML files (json and pickle)
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -59,10 +59,10 @@ python3 components for the pypi-sphinxcontrib_serializinghtml package.
 
 
 %prep
-%setup -q -n sphinxcontrib_serializinghtml-1.1.7
-cd %{_builddir}/sphinxcontrib_serializinghtml-1.1.7
+%setup -q -n sphinxcontrib_serializinghtml-1.1.8
+cd %{_builddir}/sphinxcontrib_serializinghtml-1.1.8
 pushd ..
-cp -a sphinxcontrib_serializinghtml-1.1.7 buildavx2
+cp -a sphinxcontrib_serializinghtml-1.1.8 buildavx2
 popd
 
 %build
@@ -70,7 +70,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691679220
+export SOURCE_DATE_EPOCH=1692059863
 export GCC_IGNORE_WERROR=1
 export CFLAGS="$CFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
 export FCFLAGS="$FFLAGS -fdebug-types-section -femit-struct-debug-baseonly -fno-lto -g1 -gno-column-info -gno-variable-location-views -gz=zstd "
