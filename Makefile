@@ -1,5 +1,5 @@
 PKG_NAME := pypi-sphinxcontrib_serializinghtml
-URL = https://files.pythonhosted.org/packages/a0/a3/4bd9d8c5c97312bf46b059bcf76eab42ce6ffb12560b7ce9a247e2e524a3/sphinxcontrib_serializinghtml-1.1.8.tar.gz
+URL = https://files.pythonhosted.org/packages/5c/41/df4cd017e8234ded544228f60f74fac1fe1c75bdb1e87b33a83c91a10530/sphinxcontrib_serializinghtml-1.1.9.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
