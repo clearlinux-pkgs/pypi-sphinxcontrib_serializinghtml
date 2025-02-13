@@ -7,7 +7,7 @@
 #
 Name     : pypi-sphinxcontrib_serializinghtml
 Version  : 2.0.0
-Release  : 47
+Release  : 48
 URL      : https://files.pythonhosted.org/packages/3b/44/6716b257b0aa6bfd51a1b31665d1c205fb12cb5ad56de752dfa15657de2f/sphinxcontrib_serializinghtml-2.0.0.tar.gz
 Source0  : https://files.pythonhosted.org/packages/3b/44/6716b257b0aa6bfd51a1b31665d1c205fb12cb5ad56de752dfa15657de2f/sphinxcontrib_serializinghtml-2.0.0.tar.gz
 Summary  : sphinxcontrib-serializinghtml is a sphinx extension which outputs "serialized" HTML files (json and pickle)
